@@ -16,3 +16,8 @@ applications:
     source: https://github.com/paas2/istio.git
     source_path: helm-charts/base
     destination: istio-system
+  - name: istio-operator
+    enabled: true
+    source: https://github.com/paas2/istio.git
+    source_path: helm-charts/istio-operator
+    destination: istio-system
