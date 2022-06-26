@@ -10,7 +10,6 @@ staging_namespace: &stage "labs-staging"
 # App of applications list
 applications:
 
-  # Jenkins
   - name: istio-base
     enabled: true
     source: https://github.com/paas2/istio.git
@@ -20,4 +19,9 @@ applications:
     enabled: true
     source: https://github.com/paas2/istio.git
     source_path: helm-charts/istio-operator
+    destination: istio-system
+  - name: istio-bwb-cluster-profile
+    enabled: true
+    source: https://github.com/paas2/istio.git
+    source_path: helm-charts/clusters/bwb/operator
     destination: istio-system
