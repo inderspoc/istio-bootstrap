@@ -7,6 +7,7 @@ applications:
   - name: istio-setup
     enabled: true
     source_path: "."
+    destination: argocd
     helm_values:
       - ubiquitous-journey/values-tooling.yaml
 
